@@ -33,3 +33,14 @@ export const Default = Template.bind({});
 Default.args = {
   hash: 'Qme8SriYgGNoXQzG1qYYZKThv3QTBf7pMJwUpu3gqaqQRH',
 };
+
+export const AltGatewayUrl = Template.bind({});
+AltGatewayUrl.args = {
+  hash: 'Qme8SriYgGNoXQzG1qYYZKThv3QTBf7pMJwUpu3gqaqQRH',
+  gatewayUrl: 'https://gateway.pinata.cloud/ipfs',
+};
+
+export const AltHashFormat = Template.bind({});
+AltHashFormat.args = {
+  hash: 'ipfs://Qme8SriYgGNoXQzG1qYYZKThv3QTBf7pMJwUpu3gqaqQRH',
+};
