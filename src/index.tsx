@@ -1,6 +1,6 @@
 import React, { FC, HTMLAttributes, useEffect, useState } from 'react';
 
-const DEFAULT_IPFS_GATEWAY_URL = 'https://ipfs.infura.io/ipfs/';
+const DEFAULT_IPFS_GATEWAY_URL = 'https://ipfs.infura.io/ipfs';
 
 const cleanUpHash = (hash: string) => {
   // remove the leading 'ipfs://' if it exists
@@ -28,7 +28,7 @@ export const getImgUriFromTokenUriHash = async (
   ipfsGatewayUrl = DEFAULT_IPFS_GATEWAY_URL
 ) => {
   const ipfsHash = cleanUpHash(tokenUriHash);
-  const ipfsUrl = `${ipfsGatewayUrl}${ipfsHash}`;
+  const ipfsUrl = `${ipfsGatewayUrl}/${ipfsHash}`;
   const res = await (await fetch(ipfsUrl)).json();
   return res.image as string;
 };
