@@ -1,6 +1,6 @@
 import React, { FC, HTMLAttributes, useEffect, useState } from 'react';
 
-const DEFAULT_IPFS_GATEWAY_URL = 'https://ipfs.infura.io/ipfs';
+const DEFAULT_IPFS_GATEWAY_URL = 'https://ipfs.infura.io/ipfs/';
 
 const cleanUpHash = (hash: string) => {
   // remove the leading 'ipfs://' if it exists
