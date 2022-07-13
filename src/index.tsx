@@ -23,6 +23,31 @@ export const IpfsImage: FC<IIpfsImageProps> = ({
   return <img src={`${gatewayUrl}/${cleanUpHash(hash)}`} {...props} />;
 };
 
+export interface IIpfsVideoProps extends HTMLAttributes<HTMLVideoElement> {
+  hash: string;
+  gatewayUrl?: string;
+  autoPlay?: boolean;
+  muted?: boolean;
+  loop?: boolean;
+  controls?: boolean;
+}
+
+export const IpfsVideo: FC<IIpfsVideoProps> = ({
+  hash,
+  gatewayUrl = DEFAULT_IPFS_GATEWAY_URL,
+  autoPlay = true,
+  muted = true,
+  controls = true,
+  loop = true,
+  ...props
+}) => {
+  return (
+    <video loop autoPlay muted controls {...props}>
+      <source src={`${gatewayUrl}/${cleanUpHash(hash)}`} />
+    </video>
+  );
+};
+
 export const getImgUriFromTokenUriHash = async (
   tokenUriHash: string,
   ipfsGatewayUrl = DEFAULT_IPFS_GATEWAY_URL
