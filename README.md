@@ -32,4 +32,6 @@ const Page = () => {
 }
 ```
 
+This package also has `<IpfsVideo />`, `<IpfsAudio />` and `<IpfsMedia />` that work similarly to `<IpfsImage />`.
+
 Made by [Dhaiwat](https://twitter.com/dhaiwat10)! :)
