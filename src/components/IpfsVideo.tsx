@@ -21,7 +21,13 @@ export const IpfsVideo: FC<IIpfsVideoProps> = ({
   ...props
 }) => {
   return (
-    <video loop autoPlay muted controls {...props}>
+    <video
+      loop={loop}
+      autoPlay={autoPlay}
+      muted={muted}
+      controls={controls}
+      {...props}
+    >
       <source src={`${gatewayUrl}/${cleanUpHash(hash)}`} />
     </video>
   );

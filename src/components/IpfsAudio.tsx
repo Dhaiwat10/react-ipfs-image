@@ -21,7 +21,13 @@ export const IpfsAudio: FC<IIpfsAudioProps> = ({
   ...props
 }) => {
   return (
-    <audio loop autoPlay muted controls {...props}>
+    <audio
+      loop={loop}
+      autoPlay={autoPlay}
+      muted={muted}
+      controls={controls}
+      {...props}
+    >
       <source src={`${gatewayUrl}/${cleanUpHash(hash)}`} />
     </audio>
   );
