@@ -1,5 +1,4 @@
-import React from 'react';
-import { HTMLAttributes, FC } from 'react';
+import React, { HTMLAttributes, FC } from 'react';
 import { cleanUpHash, DEFAULT_IPFS_GATEWAY_URL } from '../utils';
 
 export interface IIpfsImageProps extends HTMLAttributes<HTMLImageElement> {
